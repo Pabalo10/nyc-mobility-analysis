@@ -1,0 +1,42 @@
+# ==========================================
+# REQUIREMENTS - NYC Traffic & Mobility
+# ==========================================
+
+# 1. Manipulación y Análisis de Datos
+pandas
+numpy
+pyarrow
+openpyxl
+
+# 2. Extracción de Datos y APIs
+requests
+requests-cache
+retry-requests
+openmeteo-requests
+
+# 3. Análisis Geoespacial y Mapas
+geopandas
+pyproj
+folium
+branca
+
+# 4. Visualización de Datos
+matplotlib
+seaborn
+plotly
+
+# 5. Procesamiento Distribuido (Clúster MinIO)
+pyspark==3.5.0
+findspark
+s3fs
+boto3
+botocore
+
+# 6. Machine Learning (Modelado y Comparación)
+scikit-learn
+
+# 7. Despliegue de Aplicación Web (SaaS MVP)
+streamlit
+
+# 8. Variables de Entorno y Seguridad
+python-dotenv

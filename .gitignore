@@ -1,0 +1,52 @@
+# --- Entornos Virtuales ---
+.venv/
+venv/
+env/
+bin/
+lib/
+share/
+Include/
+pyvenv.cfg
+
+# --- Archivos de IDE (VS Code e IntelliJ/PyCharm) ---
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# --- Datos y Almacenamiento (Datasets pesados) ---
+# Evitamos subir archivos de datos locales para no saturar GitHub
+datos/
+taxi_zones/
+*.csv
+*.parquet
+*.zip
+*.json
+*.png
+!requirements.txt
+!package.json
+graphs/
+
+# --- Modelos de Machine Learning ---
+# Ignoramos las carpetas de modelos (tanto si están en src como en la raíz)
+src/modelos/
+modelos/
+*.pkl
+*.model
+*.joblib
+
+# --- Temporales de Python ---
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.ipynb_checkpoints/
+*.sqlite
+
+# --- Variables de Entorno ---
+.env
+.flaskenv
+
+# --- Otros ---
+.DS_Store

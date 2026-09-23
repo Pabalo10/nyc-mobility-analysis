@@ -1,0 +1,41 @@
+
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>NYC Taxi Predictor Pro</title>
+        <style>
+            body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background-color: #000; color: white; overflow: hidden; }
+            .header { background-color: #111; padding: 10px 25px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; z-index: 100; position: relative; }
+            h1 { margin: 0; font-size: 20px; color: #f39c12; text-transform: uppercase; letter-spacing: 2px; }
+            .controles { display: flex; align-items: center; gap: 15px; }
+            select { padding: 8px 12px; font-size: 14px; border-radius: 4px; background-color: #222; color: white; border: 1px solid #444; outline: none; cursor: pointer; }
+            select:hover { border-color: #f39c12; }
+            iframe { width: 100vw; height: calc(100vh - 55px); border: none; display: block; }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>🚕 NYC Taxi Demand Dashboard</h1>
+            <div class="controles">
+                <select id="daySelector" onchange="cambiarMapa()">
+                    <option value="mapas_diarios/mapa_Lunes.html" selected>Lunes</option>
+                    <option value="mapas_diarios/mapa_Martes.html">Martes</option>
+                    <option value="mapas_diarios/mapa_Miércoles.html">Miércoles</option>
+                    <option value="mapas_diarios/mapa_Jueves.html">Jueves</option>
+                    <option value="mapas_diarios/mapa_Viernes.html">Viernes</option>
+                    <option value="mapas_diarios/mapa_Sábado.html">Sábado</option>
+                    <option value="mapas_diarios/mapa_Domingo.html">Domingo</option>
+                </select>
+            </div>
+        </div>
+        <iframe id="mapFrame" src="mapas_diarios/mapa_Lunes.html"></iframe>
+        <script>
+            function cambiarMapa() {
+                const selector = document.getElementById('daySelector');
+                document.getElementById('mapFrame').src = selector.value;
+            }
+        </script>
+    </body>
+    </html>
+    
